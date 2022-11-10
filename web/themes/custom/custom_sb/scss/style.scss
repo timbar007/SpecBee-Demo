@@ -51,7 +51,7 @@ $color_5: #ff5100;
 $color_6: #3f484e;
 $color_7: #ced0d4;
 $color_8: #0085dd;
-$color_9: #007ecf;
+$color_9: #9ba5ac;
 $color_10: #017fd5;
 $color_11: #fff;
 $color_12: #ffffff;
@@ -203,7 +203,7 @@ i.fa.fa-angle-down.custom {
     background: #fff;
     width: 14px;
 	margin: 0px auto;
-	color: $color_9;
+	color: $color_10;
 	display: none;
 	padding: 0px;
 }
@@ -250,6 +250,9 @@ i.fa.fa-angle-down.custom {
 			box-shadow: 15px 16px 6px grey;
 		}
 	}
+}
+.carousel-indicators{ 
+	display: none; 
 }
 .card-star {
 	position: absolute;
@@ -309,6 +312,9 @@ i.fa.fa-angle-down.custom {
 	right: 0%;
 	font-size: 24px;
 	cursor: pointer;
+	&:hover {
+		color: $color_10;
+	}
 }
 .fa-chevron-left {
 	color: $color_9;
@@ -317,7 +323,11 @@ i.fa.fa-angle-down.custom {
 	left: 0%;
 	font-size: 24px;
 	cursor: pointer;
+	&:hover {
+		color: $color_10;
+	}
 }
+
 .slick-prev.slick-disabled {
 	.fa {
 		&:before {
@@ -382,6 +392,35 @@ i.fa.fa-angle-down.custom {
 			font-size: 22px;
 		}
 	}
+	.carousel-control-next {
+		right: -8px;
+	}
+	.carousel-control-prev, .carousel-control-next{
+		display: none;
+	}
+	.carousel-indicators{ 
+		bottom: -56px;
+		display: block;
+		left: 22%;
+		[data-bs-target]  {
+			cursor: pointer;
+			height: 20px;
+			width: 20px;
+			text-decoration: none;
+			color: #fff;
+			background-color: currentColor;
+			border-radius: 50%;
+			display: inline-block;
+			background-clip: content-box;
+			border: 1px solid #666666;
+		}
+		  
+		.active {
+			background-color: $color_10;
+			border: none;
+		}
+	}
+	
 }
 
 @media (max-width: 610px) {
@@ -435,6 +474,9 @@ i.fa.fa-angle-down.custom {
 			font-size: 22px;
 		}
 	}
+	.carousel-control-next {
+		right: -8px;
+	}
 }
 @media (min-width: 992px) {
 	.card {
@@ -450,4 +492,12 @@ i.fa.fa-angle-down.custom {
 			font-size: 24px;
 		}
 	}
+	
+}
+
+@media (min-width: 1200px) {
+	.carousel-control-next {
+		right: -2px;
+	}
+	
 }
