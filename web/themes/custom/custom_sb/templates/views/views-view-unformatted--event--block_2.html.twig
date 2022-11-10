@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<div id="s_profile" class="carousel slide w-100" data-bs-ride="carousel">
+                        
+    <div class="carousel-inner w-100 slider-nav card-body" role="listbox">
+      {% for row in rows %}
+        <div class="carousel-item">
+          <div class="card col-lg-4 col-md-6 col-sm-12 col-">
+            {{ row.content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+                        
+    <a class="carousel-control-prev bg-transparent w-aut" href="#s_profile" role="button" data-bs-slide="prev">
+      <i class="fa fa-chevron-left" aria-label="Previous"></i>
+    </a>
+    <a class="carousel-control-next bg-transparent w-aut" href="#s_profile" role="button" data-bs-slide="next">
+      <i class="fa fa-chevron-right" aria-hidden="true" aria-label="Next"></i>
+    </a>
+    
+</div>
+

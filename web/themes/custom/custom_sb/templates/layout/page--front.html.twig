@@ -1,0 +1,44 @@
+<div class="container mt-5">
+        
+    <div class="text-center">
+        <h2>Lorem ipsum dolor. Ismet</h2>
+        <p class="head">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+    </div>
+    
+   <ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="home-tab" type="button" >Featured Conferences <i class="fa fa-angle-down custom" aria-hidden="true"></i></button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="profile-tab" type="button" >Recommended Conferences <i class="fa fa-angle-down custom" aria-hidden="true"></i></button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="contact-tab" type="button">Past Conferences <i class="fa fa-angle-down custom" aria-hidden="true"></i></button>
+			</li>
+		</ul>
+		
+		<div class="tab-content" id="myTabContent">
+			<div class="fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+				<div class="row">
+					{{ featured }}
+				</div>
+			</div>
+			
+			
+			<div class="fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+				<div class="row">
+					{{ recommended }}
+				</div>
+			</div>
+			
+			
+			<div class="fade" id="contact" role="tabpanel" aria-labelledby="profile-tab">
+				<div class="row">
+					{{ past }}
+				</div>
+			</div>
+			
+			
+		</div>
+    
+</div>
